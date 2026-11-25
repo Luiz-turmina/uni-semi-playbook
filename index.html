@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Playbook SDR · Unidas Seminovos</title>
+<meta name="description" content="Playbook comercial das SDRs da Unidas Seminovos: quem é a empresa, ferramentas, qualificação, scripts, objeções, metas e bandeiras." />
+<meta name="theme-color" content="#06101B" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="logo-unidas-quadrada.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=3" />
+<script>(function(){try{if(sessionStorage.getItem("usp_ok")!=="1")document.documentElement.classList.add("locked");}catch(e){document.documentElement.classList.add("locked");}})();</script>
+</head>
+<body>
+
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-t">
+  <form class="gate-card" id="gate-form" autocomplete="off">
+    <img src="logo-unidas-seminovos.png" alt="Unidas Seminovos" width="180" />
+    <h1 id="gate-t">Playbook SDR</h1>
+    <p>Material interno da operação. Digite a senha que você recebeu para entrar.</p>
+    <input id="gate-pw" type="password" placeholder="Senha" autocomplete="off" aria-label="Senha" />
+    <p class="gate-err" id="gate-err" hidden>Senha incorreta. Tente novamente.</p>
+    <button class="btn btn-r" type="submit">Entrar</button>
+  </form>
+</div>
+<noscript><p style="padding:24px;font-family:sans-serif">Ative o JavaScript para abrir este material.</p></noscript>
+
+<header class="top" id="top">
+  <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir capítulos" aria-expanded="false"><i></i><i></i><i></i></button>
+  <a class="brand" href="#inicio" aria-label="Início">
+    <img src="logo-unidas-seminovos-branco.png" alt="Unidas Seminovos" />
+    <span class="brand-sep"></span><span class="brand-t">Playbook SDR</span>
+  </a>
+  <div class="top-cur" id="top-cur" aria-live="polite"></div>
+  <div class="top-prog" title="Capítulos estudados"><svg viewBox="0 0 36 36"><circle class="pg-bg" cx="18" cy="18" r="15.5"/><circle class="pg-fg" id="pg-fg" cx="18" cy="18" r="15.5"/></svg><b id="pg-n">0/12</b></div>
+</header>
+
+<nav class="rail" id="rail" aria-label="Capítulos">
+  <p class="rail-t">Capítulos</p>
+  <ol id="rail-list"></ol>
+  <button class="rail-reset" id="rail-reset" type="button">Zerar meu progresso</button>
+</nav>
+<div class="rail-bg" id="rail-bg"></div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true">
+    <svg class="road" viewBox="0 0 1200 600" preserveAspectRatio="none"><path class="road-l" d="M-20 470 C 220 380, 420 520, 640 430 S 1040 300, 1240 360"/><path class="road-l r2" d="M-20 520 C 240 430, 440 570, 660 480 S 1060 350, 1240 410"/></svg>
+    <svg class="car" viewBox="0 0 220 80" fill="none"><path d="M10 58h18a12 12 0 0 1 24 0h92a12 12 0 0 1 24 0h22v-14c0-6-4-10-10-12l-30-6-20-14c-3-2-6-3-9-3H78c-4 0-7 1-10 4L52 30l-30 6c-8 2-12 8-12 16z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="40" cy="58" r="10" stroke="currentColor" stroke-width="3"/><circle cx="156" cy="58" r="10" stroke="currentColor" stroke-width="3"/><path d="M66 30l14-14h36l22 14z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="wrap hero-in">
+    <p class="eyebrow">Playbook comercial · BLU × Unidas Seminovos</p>
+    <h1 class="h-xl">Da primeira ligação à <em>visita realizada.</em></h1>
+    <p class="hero-sub">Tudo o que você precisa para atender leads da Unidas Seminovos: quem somos, como mexer nas ferramentas, o que perguntar, o que falar e como ser medida.</p>
+    <div class="hero-cta">
+      <a class="btn btn-r" href="#c1">Começar pelo capítulo 1 <span aria-hidden="true">→</span></a>
+      <a class="btn btn-g" href="#c5">Ir direto às ferramentas</a>
+    </div>
+    <ul class="hero-kpis" id="hero-kpis"></ul>
+  </div>
+</section>
+
+<section class="trilhas" id="trilhas" aria-label="Trilhas de leitura"></section>
+
+<div class="wrap" id="chapters"></div>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img src="logo-unidas-seminovos-branco.png" alt="Unidas Seminovos" height="30" />
+    <p>Playbook preparado pela BLU Sales Group para a operação Unidas Seminovos. Informações públicas conferidas no site da Unidas Seminovos em 25/11/2026. Material de uso interno: não compartilhe.</p>
+  </div>
+</footer>
+</main>
+
+<div class="toast" id="toast" role="status" hidden>Copiado</div>
+
+<script>window.USP_HASH="1391f0386daf92e48856b18a13e2480b44baef45dde4e083249989ea820b8707";</script>
+<script src="gate.js?v=1"></script>
+<script src="data.js?v=3"></script>
+<script src="data2.js?v=3"></script>
+<script src="app.js?v=3"></script>
+</body>
+</html>
